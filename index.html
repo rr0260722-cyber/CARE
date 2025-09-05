@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CareConnect Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="C:/New folder/diabetesapp1/assests/Ramaiah-logo-scaled.webp" alt="Hospital" class="brand-logo" />
+      <h1>CareConnect</h1>
+    </div>
+    <span class="badge" id="secureBadge" style="display:none;">Secure Access</span>
+  </header>
+
+  <div class="doctor-walk">
+    <img src="C:/New folder/diabetesapp1/assests/doctor walk.gif" alt="Doctor walking" />
+  </div>
+
+  <main class="login-container">
+    <div class="tabs">
+      <button class="tab active" data-tab="patient">Patient</button>
+      <button id="subscribeBtn">Subscribe</button>
+      <button class="tab" data-tab="premium">Premium</button>
+      <button class="tab" data-tab="doctor">Doctor</button>
+    </div>
+
+    <div class="forms">
+      <!-- Patient Form -->
+      <form id="form-patient" class="form active" novalidate>
+        <div class="field">
+          <label for="patientEmail">Email</label>
+          <input id="patientEmail" type="email" placeholder="you@example.com" required />
+        </div>
+        <button class="btn primary" type="submit">Login as Patient</button>
+      </form>
+
+      <!-- Subscribe Form -->
+      <form id="form-subscribe" class="form" novalidate>
+        <div style="text-align:center; margin-bottom: 10px;">
+          <img src="C:/New folder/diabetesapp1/assests/scanner.jpg" alt="Payment Scanner" style="width:150px; height:auto;" id="scannerImage" />
+        </div>
+
+        <!-- New Patient Email Field Added Here -->
+        <div class="field">
+          <label for="subscribeEmail">Patient Email</label>
+          <input id="subscribeEmail" type="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="field">
+          <label for="patientName">Patient Name</label>
+          <input id="patientName" type="text" placeholder="Full Name" required />
+        </div>
+        <div class="field">
+          <label for="patientContact">Patient Contact Number</label>
+          <input id="patientContact" type="tel" placeholder="e.g. 9876543210" pattern="[0-9]{10}" required />
+        </div>
+        <div class="field">
+          <label for="subscriptionPlan">Select Plan</label>
+          <select id="subscriptionPlan" required>
+            <option value="" disabled selected>Select plan</option>
+            <option value="1">₹1 Monthly</option>
+            <option value="2999">₹2999 Yearly</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="paymentMode">Payment Mode</label>
+          <select id="paymentMode" required>
+            <option value="" disabled selected>Select payment mode</option>
+            <option value="Paytm">Paytm</option>
+            <option value="Google Pay">Google Pay</option>
+            <option value="PhonePe">PhonePe</option>
+          </select>
+        </div>
+
+        <!-- Payment confirmation checkbox -->
+        <div class="field">
+          <label>
+            <input type="checkbox" id="paymentConfirmed" required />
+            I confirm I have completed the payment
+          </label>
+        </div>
+
+        <button class="btn primary" type="submit">Make Payment & Subscribe</button>
+      </form>
+
+      <!-- Premium Form -->
+      <form id="form-premium" class="form" novalidate>
+        <div style="display:flex; justify-content:center; margin:12px 0;">
+          <img src="C:/New folder/diabetesapp1/assests/premium.png" alt="Premium User"
+               style="width:80px; height:80px; object-fit:contain; border-radius:14px;" />
+        </div>
+        <div class="field">
+          <label for="premiumEmail">Email</label>
+          <input id="premiumEmail" type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="field">
+          <label for="premiumPassword">Password</label>
+          <input id="premiumPassword" type="password" placeholder="••••••••" required minlength="6" />
+          <small class="hint">Premium users need email + password.</small>
+        </div>
+        <button class="btn primary" type="submit">Login as Premium</button>
+      </form>
+
+      <!-- Doctor Form -->
+      <form id="form-doctor" class="form" novalidate>
+        <div class="field">
+          <label for="doctorEmail">Confidential Email</label>
+          <input id="doctorEmail" type="email" placeholder="doctor@hospital.com" required />
+        </div>
+        <div class="field">
+          <label for="doctorPassword">Password</label>
+          <input id="doctorPassword" type="password" placeholder="••••••••" required minlength="6" />
+        </div>
+        <button class="btn primary" type="submit">Login as Doctor</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

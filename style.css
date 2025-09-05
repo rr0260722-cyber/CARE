@@ -1,0 +1,422 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Top bar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1976d2;
+  color: white;
+  padding: 10px 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.topbar h1 {
+  font-size: 1.5rem;
+}
+
+.badge {
+  background: #ff9800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+/* Doctor walking animation */
+.doctor-walk {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.doctor-walk img {
+  width: 120px;
+  animation: walk 5s linear infinite;
+}
+
+@keyframes walk {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Login container */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto 40px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Tabs container */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 8px; /* space between buttons */
+}
+
+/* Tabs & Subscribe button styles — uniform */
+.tab,
+#subscribeBtn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #e0e0e0;
+  transition: 0.3s;
+  font-weight: bold;
+  border-radius: 6px;
+  margin: 0; /* Remove margin here for better spacing */
+  text-align: center;
+  color: #000;
+}
+
+.tab.active,
+#subscribeBtn.active {
+  background: #1976d2;
+  color: white;
+}
+
+.tab:hover:not(.active),
+#subscribeBtn:hover:not(.active) {
+  background: #a6c8ff;
+  color: #0d47a1;
+}
+
+/* Forms */
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+.field {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+label {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+/* Input invalid style */
+input.invalid,
+select.invalid {
+  border-color: red;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+}
+
+/* Success message */
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn.primary {
+  background: #1976d2;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn.primary:hover {
+  background: #125a9c;
+}
+
+.btn.primary:active {
+  background: #0b3d91;
+  transform: scale(0.98);
+}
+
+/* Hint */
+.hint {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+/* Added styles for Patient Name and Phone Number inputs */
+input::placeholder {
+  color: #999;
+}
+
+input[type="tel"] {
+  letter-spacing: 0.1em; /* better spacing for phone digits */
+}
+
+/* If you want to align two fields side-by-side later */
+/* @media (min-width: 600px) {
+  .field.half-width {
+    width: 48%;
+    display: inline-block;
+  }
+} */
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Top bar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1976d2;
+  color: white;
+  padding: 10px 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.topbar h1 {
+  font-size: 1.5rem;
+}
+
+.badge {
+  background: #ff9800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+/* Doctor walking animation */
+.doctor-walk {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.doctor-walk img {
+  width: 120px;
+  animation: walk 5s linear infinite;
+}
+
+@keyframes walk {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Login container */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto 40px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Tabs container */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 8px; /* space between buttons */
+}
+
+/* Tabs & Subscribe button styles — uniform */
+.tab,
+#subscribeBtn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #e0e0e0;
+  transition: 0.3s;
+  font-weight: bold;
+  border-radius: 6px;
+  margin: 0; /* Remove margin here for better spacing */
+  text-align: center;
+  color: #000;
+}
+
+.tab.active,
+#subscribeBtn.active {
+  background: #1976d2;
+  color: white;
+}
+
+.tab:hover:not(.active),
+#subscribeBtn:hover:not(.active) {
+  background: #a6c8ff;
+  color: #0d47a1;
+}
+
+/* Forms */
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+.field {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+label {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+/* Input invalid style */
+input.invalid,
+select.invalid {
+  border-color: red;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+}
+
+/* Success message */
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn.primary {
+  background: #1976d2;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn.primary:hover {
+  background: #125a9c;
+}
+
+.btn.primary:active {
+  background: #0b3d91;
+  transform: scale(0.98);
+}
+
+/* Hint */
+.hint {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+/* Added styles for Patient Name and Phone Number inputs */
+input::placeholder {
+  color: #999;
+}
+
+input[type="tel"] {
+  letter-spacing: 0.1em; /* better spacing for phone digits */
+}
+
+/* If you want to align two fields side-by-side later */
+/* @media (min-width: 600px) {
+  .field.half-width {
+    width: 48%;
+    display: inline-block;
+  }
+} */
